@@ -7,8 +7,20 @@
 using namespace std;
 
 void printVector(const vector<int> &vec, const string &separator = ", ", const string &prefix = "[", const string &suffix = "]")
+{
+    cout << prefix;
+    for (size_t i = 0; i < vec.size(); ++i)
+    {
+        cout << vec[i];
+        if (i < vec.size() - 1)
+        {
+            cout << separator;
+        }
+    }
+    cout << suffix << endl;
+}
 
-    int main()
+int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
